@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+//This is a new instance of Vue
+//Can help us to use data between brothers components by emitting events and listening from others
+export const bus = new Vue()
+
 new Vue({
   router,
   store,
