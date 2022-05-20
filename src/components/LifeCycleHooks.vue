@@ -43,6 +43,10 @@ export default {
     // The updated() method will be called on your component after the component is updated for any reason
     console.log('%c Updated ', "background-color: red");
   },
+  destroyed() {
+    // The destroyed() method will be called on your component when the component is removed from the page
+    console.log('%c Destroyed ', "background-color: purple");
+  }
 }
 </script>
 

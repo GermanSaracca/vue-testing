@@ -49,6 +49,9 @@ export default {
             this.ended = false;
             
         },
+    },
+    mounted() {
+        console.log('mounted punch bag')
     }
 }
 </script>

@@ -19,7 +19,21 @@
     /> -->
     <!-- <EventBus1 />
     <EventBus2 /> -->
-    <LifeCycleHooks />
+    <!-- <LifeCycleHooks /> -->
+    <!-- <Slots>
+      <h2 slot="title">{{title}}</h2>
+      <p slot="text">I am the paragraph text</p>
+    </Slots> -->
+    <!-- This will look and know we want to output a component in here -->
+    <!-- If we wrap component tag in keep-alive the component change will not unmount the last view -->
+    <!-- <keep-alive>
+      <component :is="selectedDynamicView"></component>
+    </keep-alive>
+
+    <button @click="selectedDynamicView = 'DynamicCSS'">Show DynamicCSS</button>
+    <button @click="selectedDynamicView = 'PunchBag'">Show PunchBag</button> -->
+    <!-- <AddBlog /> -->
+    <Filters />
   </div>
 </template>
 
@@ -37,6 +51,9 @@ import PrimitiveVsReferenceTypes from '@/components/PrimitiveVsReferenceTypes.vu
 import EventBus1 from '@/components/EventBus1.vue'
 import EventBus2 from '@/components/EventBus2.vue'
 import LifeCycleHooks from '@/components/LifeCycleHooks.vue'
+import Slots from '@/components/Slots.vue'
+import AddBlog from '@/components/AddBlog.vue'
+import Filters from '@/components/Filters.vue'
 
 export default {
   name: 'HomeView',
@@ -53,6 +70,9 @@ export default {
     EventBus1,
     EventBus2,
     LifeCycleHooks,
+    Slots,
+    AddBlog,
+    Filters,
   },
   data: () => ({
     numbers: ['1', '2', '3'],
@@ -61,6 +81,8 @@ export default {
       name: 'John',
       age: 30,
     },
+    title: "I'm a dynamic slot title",
+    selectedDynamicView: 'DynamicCSS',
   }),
   methods: {
     //We listen to this event from PrimitiveVsReferenceTypes.vue

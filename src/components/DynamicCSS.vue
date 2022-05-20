@@ -28,6 +28,9 @@ export default {
         nearby: this.nearby
       }
     }
+  },
+  mounted () {
+    console.log('mounted dynamic css')
   }
 }
 </script>
