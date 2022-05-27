@@ -10,16 +10,16 @@
 
 <script>
 export default {
-    data() {
-        return {
-            favFood: '',
-        }
-    },
-    methods: {
-        submit() {
-            console.log(this.$refs.input)
-            this.favFood = this.$refs.input.value;
-        }
+  data () {
+    return {
+      favFood: ''
     }
+  },
+  methods: {
+    submit () {
+      console.log(this.$refs.input)
+      this.favFood = this.$refs.input.value
+    }
+  }
 }
 </script>

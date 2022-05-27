@@ -12,17 +12,17 @@
 import { bus } from '@/main'
 
 export default {
-    data() {
-        return {
-            title: 'Initial Bus 1 title',
-        }
-    },
-    methods : {
-        //We emit this event
-        changeTitle(newTitle) {
-            this.title = newTitle;
-            bus.$emit('changeTitle', newTitle );
-        },
+  data () {
+    return {
+      title: 'Initial Bus 1 title'
     }
+  },
+  methods: {
+    // We emit this event
+    changeTitle (newTitle) {
+      this.title = newTitle
+      bus.$emit('changeTitle', newTitle)
+    }
+  }
 }
 </script>

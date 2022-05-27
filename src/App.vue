@@ -1,26 +1,43 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
+  <v-app>
+
+    <nav class="d-flex ">
+      <router-link to="/" active-class="active" exact="">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/computed">Computed</router-link>
     </nav>
-    <router-view/>
-    
+    <nav class="d-flex ">
+      <router-link to="/blog/33">Blog</router-link>
 
-  </div>
+    </nav>
+
+
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss">
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  #app {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-</style>
+<script>
 
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  })
+}
+</script>
+<style lang="scss">
+ nav {
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .router-link-exact-active {
+    background-color: red;
+  }
+ }
+</style>

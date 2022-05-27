@@ -1,5 +1,4 @@
 
-
 <template>
   <!-- Primitive are booleans, strings, numbers, null, undefined, symbols, etc
 Reference are objects, arrays, functions, etc -->
@@ -16,18 +15,18 @@ Reference are objects, arrays, functions, etc -->
 
 <script>
 export default {
-    props: ['primitive', 'reference'],
-    methods: {
-        changeName() {
-            this.reference.name = 'Jane';
-        },
-        changeAge() {
-            this.reference.age = 40;
-        },
-        changePrimitive() {
-            this.$emit('changePrimitive', 'I changed the primitive');
-        },
+  props: ['primitive', 'reference'],
+  methods: {
+    changeName () {
+      this.reference.name = 'Jane'
     },
+    changeAge () {
+      this.reference.age = 40
+    },
+    changePrimitive () {
+      this.$emit('changePrimitive', 'I changed the primitive')
+    }
+  }
 }
 </script>
 

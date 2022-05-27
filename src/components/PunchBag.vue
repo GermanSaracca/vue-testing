@@ -1,9 +1,9 @@
 <template>
     <div class="punch-bag-game">
         <!-- bag image -->
-        <div 
-            id="bag" 
-            :class="{burst: ended, punching: isPunching}" 
+        <div
+            id="bag"
+            :class="{burst: ended, punching: isPunching}"
             @mousedown="punching"
             @mouseup="punchingOut"
         ></div>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <!-- game controls -->                              
+        <!-- game controls -->
         <div id="controls">
             <button v-show="!ended" @click="punch">Punch</button>
             <button @click="restart">Restart</button>
@@ -24,41 +24,39 @@
 </template>
 <script>
 export default {
-    data: () => ({
-        health: 100,
-        ended: false,
-        isPunching: false,
-    }),
-    methods: {
-        punch() {
-            this.health -= 10;
-            if (this.health <= 0) {
-                this.ended = true;
-                this.isPunching = false;
-            }
-        },
-        punching() {
-            this.punch();
-            this.isPunching = true;
-        },
-        punchingOut() {
-            this.isPunching = false;
-        },
-        restart() {
-            this.health = 100;
-            this.ended = false;
-            
-        },
+  data: () => ({
+    health: 100,
+    ended: false,
+    isPunching: false
+  }),
+  methods: {
+    punch () {
+      this.health -= 10
+      if (this.health <= 0) {
+        this.ended = true
+        this.isPunching = false
+      }
     },
-    mounted() {
-        console.log('mounted punch bag')
+    punching () {
+      this.punch()
+      this.isPunching = true
+    },
+    punchingOut () {
+      this.isPunching = false
+    },
+    restart () {
+      this.health = 100
+      this.ended = false
     }
+  },
+  mounted () {
+    console.log('mounted punch bag')
+  }
 }
 </script>
 
 <style lang="scss" >
     .punch-bag-game {
-        
 
         #bag {
             width: 200px;

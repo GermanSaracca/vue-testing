@@ -13,25 +13,22 @@
       </div>
       <div class="form-group checks">
         <h3>Categories</h3>
-        <div class="check-group">        
+        <div class="check-group">
           <label for="ninjas">Ninjas</label>
           <input type="checkbox" value="ninjas" v-model="blog.categories">
         </div>
-        <div class="check-group">        
+        <div class="check-group">
           <label for="wizards">Wizards</label>
           <input type="checkbox" value="wizards" v-model="blog.categories">
         </div>
-        <div class="check-group">        
+        <div class="check-group">
           <label for="mario">Mario</label>
           <input type="checkbox" value="mario" v-model="blog.categories">
         </div>
-        <div class="check-group">        
+        <div class="check-group">
           <label for="cheese">Cheese</label>
           <input type="checkbox" value="cheese" v-model="blog.categories">
         </div>
-
-
-
 
       </div>
       <div class="form-group">
@@ -58,20 +55,20 @@
 
 <script>
 export default {
-  data() {
-    return {  
+  data () {
+    return {
       blog: {
         title: '',
         content: '',
         categories: [],
         author: ''
       },
-      authors: ["German", "Mariana", "Gino"]
+      authors: ['German', 'Mariana', 'Gino']
     }
   },
   methods: {
-    
-  },
+
+  }
 }
 </script>
 <style lang="scss">
@@ -81,13 +78,13 @@ export default {
     margin: 0 auto;
 
       h2 {
-        font-size: 2rem;  
+        font-size: 2rem;
         margin-bottom: 1rem;
       }
       form {
         padding: 1rem;
         border: solid 2px #333;
-       
+
         .form-group {
           display: flex;
           flex-direction: column;
@@ -117,7 +114,7 @@ export default {
               margin: 0;
             }
           }
-       
+
           label {
               margin-bottom: 0.5rem;
           }

@@ -11,19 +11,19 @@
 </template>
 
 <script>
-    export default {
-        name: 'pepito',
-        data: () => ({
-            error: false,
-            success: false,
-        }),
-        methods: {
-            toggleError () {
-                this.error = !this.error;
-            },
-            toggleSuccess () {
-                this.success = !this.success;
-            }
-        }
+export default {
+  name: 'pepito',
+  data: () => ({
+    error: false,
+    success: false
+  }),
+  methods: {
+    toggleError () {
+      this.error = !this.error
+    },
+    toggleSuccess () {
+      this.success = !this.success
     }
+  }
+}
 </script>

@@ -12,40 +12,40 @@ export default {
     count: 0
   }),
   methods: {
-    increment() {
+    increment () {
       this.count++
     }
   },
   // Life-cycle hooks are methods that are called by Vue.js when certain events occur.
-  beforeCreate() {
-    console.log('%c beforeCreate ', "background-color: yellow; color: black;");
+  beforeCreate () {
+    console.log('%c beforeCreate ', 'background-color: yellow; color: black;')
   },
-  created() {
-    /* 
+  created () {
+    /*
       The created() method will be called on your component after the component object is created but before it is put on the page. All of the component's data, props, computed and methods will be available. The only thing that won't be available is the template or any of the component's DOM. There really is no view yet to speak of.
     */
-    console.log('%c Created ', "background-color: green");
+    console.log('%c Created ', 'background-color: green')
   },
-  beforeMount() {
-    console.log('%c beforeMount ', "background-color: blue");
+  beforeMount () {
+    console.log('%c beforeMount ', 'background-color: blue')
   },
-  mounted() {
-    /* 
+  mounted () {
+    /*
       The mounted() method will be called on your component after the component is put on the page. The DOM is available and can be accessed.
     */
-    console.log('%c Mounted ', "background-color: cyan; color: black;");
+    console.log('%c Mounted ', 'background-color: cyan; color: black;')
   },
-  beforeUpdate() {
+  beforeUpdate () {
     // The beforeUpdate() method will be called on your component before the component is updated for any reason
-    console.log('%c beforeUpdate ', "background-color: orange");
+    console.log('%c beforeUpdate ', 'background-color: orange')
   },
-  updated() {
+  updated () {
     // The updated() method will be called on your component after the component is updated for any reason
-    console.log('%c Updated ', "background-color: red");
+    console.log('%c Updated ', 'background-color: red')
   },
-  destroyed() {
+  destroyed () {
     // The destroyed() method will be called on your component when the component is removed from the page
-    console.log('%c Destroyed ', "background-color: purple");
+    console.log('%c Destroyed ', 'background-color: purple')
   }
 }
 </script>

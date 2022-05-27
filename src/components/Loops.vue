@@ -31,20 +31,20 @@
 
 <script>
 export default {
-    data: () => ({
-        title: 'Loops',
-        characters: ["Mario", "Luigi", "Yoshi", "Bowser"],
-        ninjas: [
-            { name: "Ryu", age: 25, level: 5 },
-            { name: "Ken", age: 35 },
-            { name: "Chun-Li", age: 20 },
-            { name: "M.Bison", age: 30 },
-        ]
-    }),
-    methods: {
-    },
-    computed: {
+  data: () => ({
+    title: 'Loops',
+    characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+    ninjas: [
+      { name: 'Ryu', age: 25, level: 5 },
+      { name: 'Ken', age: 35 },
+      { name: 'Chun-Li', age: 20 },
+      { name: 'M.Bison', age: 30 }
+    ]
+  }),
+  methods: {
+  },
+  computed: {
 
-    }
+  }
 }
 </script>
